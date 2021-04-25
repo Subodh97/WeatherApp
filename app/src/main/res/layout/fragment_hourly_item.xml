@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewHourly"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginRight="10dp"
+    app:cardBackgroundColor="#000000"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hourLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/hourlyPressureShow"
+        app:layout_constraintStart_toEndOf="@+id/hourlyPressureShow">
+
+        <TextView
+            android:id="@+id/hourlyTempShow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hourT"
+            tools:layout_conversion_absoluteHeight="80dp"
+            tools:layout_conversion_absoluteWidth="98dp" />
+
+        <TextView
+            android:id="@+id/hourlyPressureShow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/hourlyTempShow"
+            app:layout_constraintTop_toTopOf="@+id/hourlyTempShow"
+            tools:layout_conversion_absoluteHeight="80dp"
+            tools:layout_conversion_absoluteWidth="98dp" />
+
+        <TextView
+            android:id="@+id/hourlyHumidityShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/hourlyPressureShow"
+            app:layout_constraintTop_toTopOf="@+id/hourlyPressureShow"
+            tools:layout_conversion_absoluteHeight="80dp"
+            tools:layout_conversion_absoluteWidth="98dp" />
+
+        <TextView
+            android:id="@+id/hourlyDescShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hourlyTempShow"
+            tools:layout_conversion_absoluteHeight="80dp"
+            tools:layout_conversion_absoluteWidth="98dp" />
+
+        <TextView
+            android:id="@+id/hourT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

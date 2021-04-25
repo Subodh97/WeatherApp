@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginRight="10dp"
+    app:cardBackgroundColor="#060606"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dailyLyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/dailyTempMaxShow"
+        app:layout_constraintStart_toEndOf="@+id/dailyTempMaxShow">
+
+        <TextView
+            android:id="@+id/dailyTempShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateT"
+            tools:layout_conversion_absoluteHeight="50dp"
+            tools:layout_conversion_absoluteWidth="65dp" />
+
+        <TextView
+            android:id="@+id/dailyTempMinShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/dailyTempShow"
+            app:layout_constraintTop_toTopOf="@+id/dailyTempShow"
+            tools:layout_conversion_absoluteHeight="50dp"
+            tools:layout_conversion_absoluteWidth="65dp" />
+
+        <TextView
+            android:id="@+id/dailyTempMaxShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/dailyTempMinShow"
+            app:layout_constraintTop_toTopOf="@+id/dailyTempMinShow"
+            tools:layout_conversion_absoluteHeight="50dp"
+            tools:layout_conversion_absoluteWidth="65dp" />
+
+        <TextView
+            android:id="@+id/dailyPressureShow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/dailyTempMaxShow"
+            app:layout_constraintTop_toTopOf="@+id/dailyTempMaxShow"
+            tools:layout_conversion_absoluteHeight="50dp"
+            tools:layout_conversion_absoluteWidth="65dp" />
+
+        <TextView
+            android:id="@+id/dailyHumidityShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dailyTempShow"
+            tools:layout_conversion_absoluteHeight="50dp"
+            tools:layout_conversion_absoluteWidth="66dp" />
+
+        <TextView
+            android:id="@+id/dailyDescShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginLeft="44dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/dailyHumidityShow"
+            app:layout_constraintTop_toTopOf="@+id/dailyHumidityShow"
+            tools:layout_conversion_absoluteHeight="50dp"
+            tools:layout_conversion_absoluteWidth="66dp" />
+
+        <TextView
+            android:id="@+id/dateT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/dailyWeatherIcon"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@+id/dailyDescShow"
+            app:layout_constraintTop_toBottomOf="@+id/dailyPressureShow"
+            app:srcCompat="@drawable/weather" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
